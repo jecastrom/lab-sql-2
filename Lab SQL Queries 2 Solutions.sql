@@ -1,3 +1,4 @@
+
 /* 
 Jorge Castro DAPT NOV2021
 Lab | SQL Queries 2
@@ -6,9 +7,10 @@ Instructions:
 
 Select all the actors with the first name ‘Scarlett’.
 */
-select *
-from actor
-where first_name = 'Scarlett';
+SELECT
+  *
+FROM actor
+WHERE first_name = 'Scarlett';
 
 
 
@@ -18,9 +20,10 @@ where first_name = 'Scarlett';
 /*
 Select all the actors with the last name ‘Johansson’.
 */
-select * 
-from actor
-where last_name = ('Johansson');
+SELECT
+  *
+FROM actor
+WHERE last_name = ('Johansson');
 
 
 
@@ -30,8 +33,9 @@ where last_name = ('Johansson');
 /* 
 How many films (movies) are available for rent?
 */
-select count(*) film_id
-from inventory;
+SELECT
+  COUNT(*) film_id
+FROM inventory;
 
 
 
@@ -41,8 +45,9 @@ from inventory;
 /*
 How many films have been rented?
 */
-select count(*) rental_id
-from rental;
+SELECT
+  COUNT(*) rental_id
+FROM rental;
 
 
 
@@ -52,12 +57,15 @@ from rental;
 /*  
 What is the shortest and longest rental period?
 */
-select min(rental_duration), max(rental_duration)
-from film; 
+SELECT
+  MIN(rental_duration),
+  MAX(rental_duration)
+FROM film;
 
-select max(datediff(rental.return_date, rental.rental_date)) as longest_rental_period, 
-(datediff(rental.return_date, rental.rental_date)) > (0) as shortest_rental_period
-from rental;
+SELECT
+  MAX (DATEDIFF (rental.return_date, rental.rental_date)) AS longest_rental_period,
+(DATEDIFF (rental.return_date, rental.rental_date)) > (0) AS shortest_rental_period
+FROM rental;
 
 
 
@@ -68,8 +76,10 @@ from rental;
 What are the shortest and longest movie duration? 
 Name the values max_duration and min_duration.
 */
-select min(length) as min_duration, max(length) as max_duration 
-from film;
+SELECT
+  MIN(length) AS min_duration,
+  MAX(length) AS max_duration
+FROM film;
 
 
 
@@ -79,8 +89,9 @@ from film;
 /* 
 What's the average movie duration?
 */
-select round(avg(length)) as average_movie_duration
-from film;
+SELECT
+  ROUND(AVG(length)) AS average_movie_duration
+FROM film;
 
 
 
@@ -96,9 +107,10 @@ What's the average movie duration expressed in format (hours, minutes)?
 We have to round the operation first otherwise will give 55m,127
 select CONCAT(FLOOR((avg(length))/60),'h ',MOD((avg(length)),60),'m') from film;
 */
-select CONCAT(FLOOR(round((avg(length)))/60),'h ',MOD(round((avg(length))),60),'m')
-as average_movie_duration
-from film;
+SELECT
+  CONCAT(FLOOR(ROUND((AVG(length))) / 60), 'h ', MOD(ROUND((AVG(length))), 60), 'm')
+  AS average_movie_duration
+FROM film;
 
 
 
@@ -108,9 +120,10 @@ from film;
 /* 
 How many movies longer than 3 hours?
 */
-select distinct count(length) as movies_longer_than_3h
-from film
-where length > (3*60);
+SELECT DISTINCT
+  COUNT(length) AS movies_longer_than_3h
+FROM film
+WHERE length > (3 * 60);
 
 
 
@@ -120,8 +133,9 @@ where length > (3*60);
 /* 
 Get the name and email formatted. Example: Mary SMITH - mary.smith@sakilacustomer.org.
 */
-select concat(first_name,' ',last_name,' ','-',' ',email) as customer_contact_info
-from customer;
+SELECT
+  concat(first_name, ' ', last_name, ' ', '-', ' ', email) AS customer_contact_info
+FROM customer;
 
 
 
@@ -131,7 +145,9 @@ from customer;
 /* 
 What's the length of the longest film title?
 */
-select max(length(title)) as longest_film_title
-from film;
+SELECT
+  MAX(length(title)) AS longest_film_title
+FROM film;
+
 
 
