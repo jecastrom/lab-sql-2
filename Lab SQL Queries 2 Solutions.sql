@@ -120,7 +120,7 @@ where length > (3*60);
 /* 
 Get the name and email formatted. Example: Mary SMITH - mary.smith@sakilacustomer.org.
 */
-select concat(first_name,' ',last_name,' ','-',' ',email)
+select concat(first_name,' ',last_name,' ','-',' ',email) as customer_contact_info
 from customer;
 
 
@@ -131,7 +131,7 @@ from customer;
 /* 
 What's the length of the longest film title?
 */
-select max(length(title))
+select max(length(title)) as longest_film_title
 from film;
 
 
