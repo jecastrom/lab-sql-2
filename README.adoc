@@ -165,5 +165,5 @@ FROM
 
 https://github.com/jecastrom/lab-sql-2/blob/1802dad3e6ee06dae55372e7e2fcbaf99f9ddcb3/files_for_lab/SQL%20Lab%202%20solutions%20script%20only.sql[SQL Lab 2 script only]
 
-
+.
 
