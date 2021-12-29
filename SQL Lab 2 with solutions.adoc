@@ -32,9 +32,9 @@ The database is structured as follows:
 
 image::https://user-images.githubusercontent.com/63274055/147613177-ea085b64-ec42-40d0-a9cb-7246fdecb303.png[width=400]
 
-== Instructions
+== .Instructions
 
-=== . Select all the actors with the first name ‘Scarlett’.
+. ===  Select all the actors with the first name ‘Scarlett’.
 `Answer:`
 ```sql
 ```
