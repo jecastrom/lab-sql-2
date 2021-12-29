@@ -34,57 +34,57 @@ image::https://user-images.githubusercontent.com/63274055/147613177-ea085b64-ec4
 
 == Instructions
 
-. Select all the actors with the first name ‘Scarlett’.
+=== . Select all the actors with the first name ‘Scarlett’.
 `Answer:`
 ```sql
 ```
 
-. Select all the actors with the last name ‘Johansson’.
+=== . Select all the actors with the last name ‘Johansson’.
 `Answer:`
 ```sql
 ```
 
-. How many films (movies) are available for rent?
+=== . How many films (movies) are available for rent?
 `Answer:`
 ```sql
 ```
 
-. How many films have been rented?
+=== . How many films have been rented?
 `Answer:`
 ```sql
 ```
 
-. What is the shortest and longest rental period?
+=== . What is the shortest and longest rental period?
 `Answer:`
 ```sql
 ```
 
-. What are the shortest and longest movie duration? Name the values `max_duration` and `min_duration`.
+=== . What are the shortest and longest movie duration? Name the values `max_duration` and `min_duration`.
 `Answer:`
 ```sql
 ```
 
-. What's the average movie duration?
+=== . What's the average movie duration?
 `Answer:`
 ```sql
 ```
 
-. What's the average movie duration expressed in format (hours, minutes)?
+=== . What's the average movie duration expressed in format (hours, minutes)?
 `Answer:`
 ```sql
 ```
 
-. How many movies longer than 3 hours?
+=== . How many movies longer than 3 hours?
 `Answer:`
 ```sql
 ```
 
-. Get the name and email formatted. Example: Mary SMITH - mary.smith@sakilacustomer.org.
+=== . Get the name and email formatted. Example: Mary SMITH - mary.smith@sakilacustomer.org.
 `Answer:`
 ```sql
 ```
 
-. What's the length of the longest film title?
+=== . What's the length of the longest film title?
 `Answer:`
 ```sql
 ```
