@@ -32,59 +32,59 @@ The database is structured as follows:
 
 image::https://user-images.githubusercontent.com/63274055/147613177-ea085b64-ec42-40d0-a9cb-7246fdecb303.png[width=400]
 
-== .Instructions
+== Instructions
 
-. ===  Select all the actors with the first name ‘Scarlett’.
+===  1.- Select all the actors with the first name ‘Scarlett’.
 `Answer:`
 ```sql
 ```
 
-=== . Select all the actors with the last name ‘Johansson’.
+=== 2.- Select all the actors with the last name ‘Johansson’.
 `Answer:`
 ```sql
 ```
 
-=== . How many films (movies) are available for rent?
+=== 3.- How many films (movies) are available for rent?
 `Answer:`
 ```sql
 ```
 
-=== . How many films have been rented?
+=== 4.- How many films have been rented?
 `Answer:`
 ```sql
 ```
 
-=== . What is the shortest and longest rental period?
+=== 5.- What is the shortest and longest rental period?
 `Answer:`
 ```sql
 ```
 
-=== . What are the shortest and longest movie duration? Name the values `max_duration` and `min_duration`.
+=== 6.- What are the shortest and longest movie duration? Name the values `max_duration` and `min_duration`.
 `Answer:`
 ```sql
 ```
 
-=== . What's the average movie duration?
+=== 7.- What's the average movie duration?
 `Answer:`
 ```sql
 ```
 
-=== . What's the average movie duration expressed in format (hours, minutes)?
+=== 8.- What's the average movie duration expressed in format (hours, minutes)?
 `Answer:`
 ```sql
 ```
 
-=== . How many movies longer than 3 hours?
+=== 9.- How many movies longer than 3 hours?
 `Answer:`
 ```sql
 ```
 
-=== . Get the name and email formatted. Example: Mary SMITH - mary.smith@sakilacustomer.org.
+=== 10.- Get the name and email formatted. Example: Mary SMITH - mary.smith@sakilacustomer.org.
 `Answer:`
 ```sql
 ```
 
-=== . What's the length of the longest film title?
+=== 11.- What's the length of the longest film title?
 `Answer:`
 ```sql
 ```
