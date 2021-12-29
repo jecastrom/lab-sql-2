@@ -1,0 +1,169 @@
+= Lab | SQL Queries 2
+:toc:
+:toc-title: Lab Content
+:toc-placement!:
+ifdef::env-github[]
+:imagesdir:
+ https://gist.githubusercontent.com/path/to/gist/revision/dir/with/all/images
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+endif::[]
+ifndef::env-github[]
+:imagesdir: ./
+endif::[]
+
+
+image::https://user-images.githubusercontent.com/23629340/40541063-a07a0a8a-601a-11e8-91b5-2f13e4e6b441.png[width=70]
+                                                                         
+                                                                         
+```
+```
+
+toc::[]
+
+== Lab | Description:
+
+In this lab, you will be using the Sakila database of movie rentals. You can follow the steps listed here to get the data locally: Sakila sample database - installation.
+
+The database is structured as follows:
+
+image::https://user-images.githubusercontent.com/63274055/147613177-ea085b64-ec42-40d0-a9cb-7246fdecb303.png[width=400]
+
+== Instructions
+
+===  1.- Select all the actors with the first name ‘Scarlett’.
+`Answer:`
+```sql
+SELECT
+  *
+FROM
+  actor
+WHERE
+  first_name = 'Scarlett';
+```
+
+=== 2.- Select all the actors with the last name ‘Johansson’.
+`Answer:`
+```sql
+SELECT
+  *
+FROM
+  actor
+WHERE
+  last_name = ('Johansson');
+```
+
+=== 3.- How many films (movies) are available for rent?
+`Answer:`
+```sql
+SELECT
+  COUNT(*) film_id
+FROM
+  inventory;
+```
+
+=== 4.- How many films have been rented?
+`Answer:`
+```sql
+SELECT
+  COUNT(*) rental_id
+FROM
+  rental;
+```
+
+=== 5.- What is the shortest and longest rental period?
+`Answer:`
+```sql
+SELECT
+  MIN(rental_duration),
+  MAX(rental_duration)
+FROM
+  film;
+```
+`also this can be expressed like so:`
+```sql
+SELECT
+  MAX (
+    DATEDIFF (rental.return_date, rental.rental_date)
+  ) AS longest_rental_period,
+  (
+    DATEDIFF (rental.return_date, rental.rental_date)
+  ) > (0) AS shortest_rental_period
+FROM
+  rental;
+```
+
+=== 6.- What are the shortest and longest movie duration? Name the values `max_duration` and `min_duration`.
+`Answer:`
+```sql
+SELECT
+  MIN(length) AS min_duration,
+  MAX(length) AS max_duration
+FROM
+  film;
+```
+
+=== 7.- What's the average movie duration?
+`Answer:`
+```sql
+SELECT
+  ROUND(AVG(length)) AS average_movie_duration
+FROM
+  film;
+```
+
+=== 8.- What's the average movie duration expressed in format (hours, minutes)?
+`Answer:`
+*Using the FLOOR() and MOD function*
+
+ We have to round the operation first otherwise will give 55m,127 like so:
+ select `CONCAT(FLOOR((avg(length))/60),'h ',MOD((avg(length)),60),'m')` from film;
+```sql
+SELECT
+  CONCAT(
+    FLOOR(ROUND((AVG(length))) / 60),
+    'h ',
+    MOD(ROUND((AVG(length))), 60),
+    'm'
+  ) AS average_movie_duration
+FROM
+  film;
+```
+
+=== 9.- How many movies longer than 3 hours?
+`Answer:`
+```sql
+SELECT
+  DISTINCT COUNT(length) AS movies_longer_than_3h
+FROM
+  film
+WHERE
+  length > (3 * 60);
+```
+
+=== 10.- Get the name and email formatted. Example: Mary SMITH - mary.smith@sakilacustomer.org.
+`Answer:`
+```sql
+SELECT
+  concat(first_name, ' ', last_name, ' ', '-', ' ', email) AS customer_contact_info
+FROM
+  customer;
+```
+
+=== 11.- What's the length of the longest film title?
+`Answer:`
+```sql
+SELECT
+  MAX(length(title)) AS longest_film_title
+FROM
+  film;
+```
+
+
+https://github.com/jecastrom/lab-sql-2/blob/1802dad3e6ee06dae55372e7e2fcbaf99f9ddcb3/files_for_lab/SQL%20Lab%202%20solutions%20script%20only.sql[SQL Lab 2 script only]
+
+
+
