@@ -90,15 +90,7 @@ image::https://user-images.githubusercontent.com/63274055/147613177-ea085b64-ec4
 ```
 
 
-
-
-
-
-
-
-
-
-https://github.com/stars/jecastrom/lists/sql-ironhack-labs[SQL Lab 3 script only]
+https://github.com/jecastrom/lab-sql-2/blob/1802dad3e6ee06dae55372e7e2fcbaf99f9ddcb3/files_for_lab/SQL%20Lab%202%20solutions%20script%20only.sql[SQL Lab 2 script only]
 
 
 [NOTE]
