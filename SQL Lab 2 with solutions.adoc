@@ -1,0 +1,109 @@
+= Lab | SQL Queries 2
+:toc:
+:toc-title: Lab Content
+:toc-placement!:
+ifdef::env-github[]
+:imagesdir:
+ https://gist.githubusercontent.com/path/to/gist/revision/dir/with/all/images
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+endif::[]
+ifndef::env-github[]
+:imagesdir: ./
+endif::[]
+
+
+image::https://user-images.githubusercontent.com/23629340/40541063-a07a0a8a-601a-11e8-91b5-2f13e4e6b441.png[width=70]
+                                                                         
+                                                                         
+```
+```
+
+toc::[]
+
+== Lab | Description:
+
+In this lab, you will be using the Sakila database of movie rentals. You can follow the steps listed here to get the data locally: Sakila sample database - installation.
+
+The database is structured as follows:
+
+image::https://user-images.githubusercontent.com/63274055/147613177-ea085b64-ec42-40d0-a9cb-7246fdecb303.png[width=400]
+
+== Instructions
+
+. Select all the actors with the first name ‘Scarlett’.
+`Answer:`
+```sql
+```
+
+. Select all the actors with the last name ‘Johansson’.
+`Answer:`
+```sql
+```
+
+. How many films (movies) are available for rent?
+`Answer:`
+```sql
+```
+
+. How many films have been rented?
+`Answer:`
+```sql
+```
+
+. What is the shortest and longest rental period?
+`Answer:`
+```sql
+```
+
+. What are the shortest and longest movie duration? Name the values `max_duration` and `min_duration`.
+`Answer:`
+```sql
+```
+
+. What's the average movie duration?
+`Answer:`
+```sql
+```
+
+. What's the average movie duration expressed in format (hours, minutes)?
+`Answer:`
+```sql
+```
+
+. How many movies longer than 3 hours?
+`Answer:`
+```sql
+```
+
+. Get the name and email formatted. Example: Mary SMITH - mary.smith@sakilacustomer.org.
+`Answer:`
+```sql
+```
+
+. What's the length of the longest film title?
+`Answer:`
+```sql
+```
+
+
+
+
+
+
+
+
+
+
+https://github.com/stars/jecastrom/lists/sql-ironhack-labs[SQL Lab 3 script only]
+
+
+[NOTE]
+====
+A sample note admonition.
+====
+ 
+TIP: It works!
